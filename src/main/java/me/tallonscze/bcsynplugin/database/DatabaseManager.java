@@ -37,15 +37,15 @@ public class DatabaseManager {
             if(rowCount == 0){
                 PreparedStatement ipreparedStatement = connection
                         .prepareStatement("INSERT INTO `linked_accounts` (`minecraft_name`, `group`) VALUES (?, ?)");
-                preparedStatement.setString(1, name);
-                preparedStatement.setString(2, group);
-                preparedStatement.execute();
+                ipreparedStatement.setString(1, name);
+                ipreparedStatement.setString(2, group);
+                ipreparedStatement.execute();
             }else {
                 PreparedStatement ipreparedStatement = connection
                         .prepareStatement("UPDATE `linked_accounts` SET `group` = ? WHERE `minecraft_name` = ?");
-                preparedStatement.setString(2, name);
-                preparedStatement.setString(1, group);
-                preparedStatement.execute();
+                ipreparedStatement.setString(2, name);
+                ipreparedStatement.setString(1, group);
+                ipreparedStatement.execute();
             }
         }catch (SQLException e){
             e.printStackTrace();
