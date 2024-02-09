@@ -10,7 +10,8 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.scheduler.BukkitRunnable;
 
 public class SyncClass implements Listener {
-    static DatabaseManager database = new DatabaseManager("127.0.0.1", 3306, "bc_skyblock", "afterlife", "Z8bF77NL9I5A");
+    //"bc_skyblock", "afterlife", "Z8bF77NL9I5A"
+    static DatabaseManager database = new DatabaseManager("127.0.0.1", 3306, "linked_accounts", "root", "");
     static LuckpermsProvider luckAPI = new LuckpermsProvider();
     @EventHandler
     public void playerJoinEvenet(PlayerJoinEvent event){

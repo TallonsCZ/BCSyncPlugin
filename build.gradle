@@ -23,6 +23,13 @@ dependencies {
     compileOnly 'net.luckperms:api:5.4'
     implementation 'com.zaxxer:HikariCP:5.0.1'
     implementation 'org.mariadb.jdbc:mariadb-java-client:3.1.4'
+    implementation 'mysql:mysql-connector-java:8.0.33'
+}
+
+shadowJar {
+    relocate 'com.zaxxer', 'me.tallonscze.core.com.zaxxer'
+    relocate 'org.mariadb', 'me.tallonscze.core.org.mariadb'
+    relocate 'com.mysql', 'me.tallonscze.core.com.mysql'
 }
 
 

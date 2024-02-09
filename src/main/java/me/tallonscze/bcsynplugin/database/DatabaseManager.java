@@ -1,6 +1,7 @@
 package me.tallonscze.bcsynplugin.database;
 
 import com.zaxxer.hikari.HikariDataSource;
+import com.mysql.jdbc.Driver;
 import org.bukkit.entity.Player;
 
 import java.sql.Connection;
@@ -11,8 +12,8 @@ public class DatabaseManager {
     private final HikariDataSource hikariDataSource;
     public DatabaseManager(String host, int port, String database, String username, String password) {
 
-
-        String finalUrl = "jdbc:mariadb://" + host + ":" + port + "/" + database;
+        //mariadb
+        String finalUrl = "jdbc:mysql://" + host + ":" + port + "/" + database;
         hikariDataSource = new HikariDataSource();
         hikariDataSource.setJdbcUrl(finalUrl);
         hikariDataSource.setUsername(username);
