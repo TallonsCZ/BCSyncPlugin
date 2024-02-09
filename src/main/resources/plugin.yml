@@ -1,0 +1,4 @@
+name: bcsynplugin
+version: '${version}'
+main: me.tallonscze.bcsynplugin.Bcsynplugin
+api-version: 1.18
